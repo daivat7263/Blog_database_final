@@ -1,0 +1,16 @@
+
+<%- include("partials/header"); -%>
+<h1>Update Post</h1>
+<form class="" action="/posts-update/<%=user.id%>" method="post">
+  <div class="form-group">
+    <label>Title</label>
+    <input class="form-control" type="text" name="postTitle" value="<%=user.title%>">
+    <label>Author</label>
+    <input class="form-control" type="text" name="postAuthor" value="<%=user.author%>">
+    <label>Post</label>
+    <textarea class="form-control" name="postBody" rows="5" cols="30"><%=user.content%></textarea>
+  </div>
+  <button class="btn btn-danger" type="submit" name="button">Update</button>
+</form>
+
+<%- include("partials/footer"); -%>

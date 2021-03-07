@@ -1,0 +1,26 @@
+
+<%- include("partials/header"); -%>
+
+    <h1>Home</h1>
+
+
+  <%  for(post of user){ %>
+
+    <h1><%=post.title%></h1>
+    <h5>
+      <a href="/get-by-author/<%=post.id%>">
+        Author: <%=post.author%>
+      </a>
+    </h5>
+    <p>
+    <%=post.content%>
+    <a class="btn btn-primary" href="/posts-view/<%=post.id%>">View</a>
+    <a class="btn btn-success" href="/posts-update/<%=post.id%>">Update</a>
+    <a class="btn btn-danger" href="/posts-delete/<%=post.id%>">Delete</a>
+    </p>
+
+
+    <% } %>
+
+
+<%- include("partials/footer"); -%>
